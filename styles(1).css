@@ -1,0 +1,331 @@
+/* styles.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    /*text-decoration: none;*/
+    color: #0d0317;
+}
+
+/* Body styling */
+body {
+    background-color:/* #f3f3f9;*/ #e8e0f0
+}
+
+/* Header Styles */
+.header {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+.header h1 {
+    font-size: 35px;
+    font-weight: bolder;
+    color: #0d0317;
+}
+
+.search-bar {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    width: 300px;
+    transition: width 0.3s ease;
+}
+
+.search-bar:focus {
+    width: 350px;
+    border-color: #663399;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    gap: 15px;
+    text-decoration: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bolder;
+}
+
+.nav-links a:hover {
+    background-color: #663399;
+    color: #fff;
+}
+
+/* Background Below Nav Bar */
+.categories,
+.ngo-cards {
+    background-color:#e8e0f0;
+    text-decoration: none;
+}
+
+/* Categories Section */
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px 30px;
+    justify-content: space-between;
+}
+.categories a{
+    text-decoration: none;
+}
+.categories a:hover {
+    background-color: #663399;
+    color: #fff;
+}
+.categories button {
+    text-decoration: none;
+    border: none;
+    background-color: #fff;
+    padding: 8px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    font-size: 18px;
+    transition: background-color 0.3s, color 1s;
+    font-weight: bolder;
+}
+
+.categories button:hover {
+    background-color: #663399;
+    color: #fff;
+}
+
+/* NGO Cards Section */
+.ngo-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px 30px;
+    height: 800px;
+}
+.card p{
+    text-align: center;
+}
+.photo img{
+    border-radius: 3%;
+}
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card .photo {
+    background-color: #ddd;
+    height: 300px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+}
+/* Footer Styles */
+.footer {
+    background-color: #663399; 
+    padding: 20px 30px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #e0e0e0;
+}
+/* About Us Section */
+#divAlign {
+    text-align: center;
+    margin: auto;
+}
+
+#aboutuspara {
+    font-size: 1.1em;
+    line-height: 1.8em;
+    max-width: 800px;
+    margin: auto;
+    color: #555;
+}
+
+h1 {
+    font-size: 2em;
+    color:#0d0317;/* #663399;*/
+    margin-bottom: 25px;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+    text-align: justify;
+}
+/*ngo page*/
+/*.about {
+    text-align: right; /* Aligns paragraph text to the right */
+   /* padding: 0 20px; /* Adds horizontal padding */
+/*}
+
+.gallery {
+    text-align: right; /* Aligns the image to the right */
+/*}
+
+h2 {
+    text-align: right; /* Aligns the heading to the right */
+/*}*/
+ /* ngo section */
+ #ngoname{
+    padding-left: 3%;
+ }
+ .about {
+    padding: 30px;
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between
+  }
+  
+  .about h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .about p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    display: grid;
+        font:"calibri";
+        font-size: 1.5em;
+        justify-content:right;
+        width: 70%;
+       /* text-align: left;*/
+        margin: auto;
+        text-align: justify;
+  }
+ .gallery img{
+    background-color: #555;
+    height: 275px;
+    /*width: 400px;*/
+    border-radius: 5%;
+  }
+  
+  
+  /* Projects Section */
+  .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 30px;
+  }
+  
+  .projects button {
+    background-color: #ddd;
+    border: none;
+    padding: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+  }
+  
+  .projects button:hover {
+    background-color: #bbb;
+  }
+/*catogery */
+#ngoname{
+    padding-left: 3%;
+ }
+ .cato {
+    padding: 30px;
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between
+  }
+  
+  .cato h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .cato p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    display: grid;
+        font:"calibri";
+        font-size: 1.5em;
+        justify-content:right;
+        width: 70%;
+       /* text-align: left;*/
+        margin: auto;
+        text-align: justify;
+  }
+ .galler img{
+    background-color: #555;
+    height: 200px;
+   /* width: 300px;*/
+    border-radius: 5%;
+  }
+  /**/
+  /*.loginbuttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px 30px;
+    justify-content: space-between;
+}
+.loginbuttons button {
+    background-color: #ddd;
+    border: none;
+    padding: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+  }
+  
+  .loginbuttons button:hover {
+    background-color: #9807e6;
+  }*/

@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page - SupportNGO</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Layout */
+        body {
+            display: flex;
+            background-color: #f4f4f9;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            height: 100vh; /* Full viewport height */
+            background-color: #663399;
+            color: #fff;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: fixed; /* Fixes the sidebar on the left */
+            top: 0;
+            left: 0;
+            overflow-y: auto; /* Adds scrolling if content overflows */
+        }
+
+        .sidebar h2 {
+            margin-bottom: 20px;
+            color: #dce1d1;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            width: 100%;
+        }
+
+        .sidebar ul li {
+            width: 100%;
+        }
+
+        .sidebar ul li a {
+            display: block;
+            padding: 15px;
+            color: #fff;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #9a32b7;
+        }
+
+        /* Header */
+        .header {
+            width: 100%;
+            background-color: #663399;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            left: 250px; /* Offset to account for fixed sidebar */
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            margin-left: 250px; /* Offset for the fixed sidebar */
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(181, 27, 27, 0.1);
+        }
+
+        .section h3 {
+            margin-bottom: 15px;
+            color: #100202;
+        }
+
+        /* Sample Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Buttons */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #663399;
+            color: #f9f8f9;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #bb4cda;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="sidebar">
+        <h2>SupportNGO Admin</h2>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="admin.html">Manage NGO</a></li>
+            <li><a href="manageuser.html">Manage User</a></li>
+            <li><a href="managedonors.html">Manage Donors </a></li>
+            <li><a href="managengo.html"> Add NGO</a></li>
+           <!--<li><a href="ngo_signup.html">Sign up page (Ngo)</a></li>-->
+        </ul>
+    </div>
+
+  
+    <div class="main-content">
+       
+        <div class="header">
+            <h1>Welcome, Admin</h1>
+        </div>
+
+       
+        <div class="section" id="manage-ngos">
+            <h3>Manage NGOs</h3>
+            <table>
+                <tr>
+                    <th>NGO Name</th>
+                    <th>Mission</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>TIN</th>
+                    <th>RIN</th>
+                    <th>Contact</th>
+                    
+                </tr>
+                <tr>
+                    <td>Helping Hands</td>
+                    <td>Provide shelter to homeless</td>
+                    <td>Aid for the homeless and displaced individuals in need of shelter.</td>
+                    <td>Human Rights</td>
+                    <td>987987654687</td>
+                    <td>687654468796</td>
+                    <td>contact@helpinghands.org</td>
+                    
+                </tr>
+                <tr>
+                    <td>Care for All</td>
+                    <td>Empower underprivileged communities</td>
+                    <td>Providing education and healthcare resources to underserved populations.</td>
+                    <td>Education</td>
+                    <td>123456789012</td>
+                    <td>112233445566</td>
+                    <td>info@careforall.org</td>
+                </tr>
+                <tr>
+                    <td>Green Earth</td>
+                    <td>Promote environmental sustainability</td>
+                    <td>Tree plantation, waste management, and pollution reduction initiatives.</td>
+                    <td>Environment</td>
+                    <td>234567890123</td>
+                    <td>223344556677</td>
+                    <td>contact@greenearth.org</td>
+                </tr>
+                <tr>
+                    <td>Health First</td>
+                    <td>Provide healthcare to rural areas</td>
+                    <td>Mobile health clinics and free treatment camps for remote communities.</td>
+                    <td>Healthcare</td>
+                    <td>345678901234</td>
+                    <td>334455667788</td>
+                    <td>support@healthfirst.org</td>
+                </tr>
+                <tr>
+                    <td>Future Minds</td>
+                    <td>Support child education</td>
+                    <td>Helping children from low-income families to access quality education.</td>
+                    <td>Children</td>
+                    <td>456789012345</td>
+                    <td>445566778899</td>
+                    <td>hello@futureminds.org</td>
+                </tr>
+                <!-- Add 35 more entries in the same format -->
+                <tr>
+                    <td>Bright Future</td>
+                    <td>Empower youth through skill development</td>
+                    <td>Training programs for youth in various skill sets to improve employability.</td>
+                    <td>Youth</td>
+                    <td>567890123456</td>
+                    <td>556677889900</td>
+                    <td>contact@brightfuture.org</td>
+                </tr>
+                <tr>
+                    <td>Pure Waters</td>
+                    <td>Provide clean drinking water</td>
+                    <td>Installing clean water facilities in villages and slums.</td>
+                    <td>Water</td>
+                    <td>678901234567</td>
+                    <td>667788990011</td>
+                    <td>info@purewaters.org</td>
+                </tr>
+                <tr>
+                    <td>Safe Haven</td>
+                    <td>Protect animals and wildlife</td>
+                    <td>Rescue operations and awareness programs for animal welfare.</td>
+                    <td>Animal Welfare</td>
+                    <td>789012345678</td>
+                    <td>778899001122</td>
+                    <td>contact@safehaven.org</td>
+                </tr>
+                <tr>
+                    <td>Empower Women</td>
+                    <td>Support women's rights and education</td>
+                    <td>Educational and vocational training for underprivileged women.</td>
+                    <td>Women Empowerment</td>
+                    <td>890123456789</td>
+                    <td>889900112233</td>
+                    <td>support@empowerwomen.org</td>
+                </tr>
+                <tr>
+                    <td>Senior Smiles</td>
+                    <td>Provide support to senior citizens</td>
+                    <td>Healthcare and recreational activities for senior citizens.</td>
+                    <td>Senior Care</td>
+                    <td>901234567890</td>
+                    <td>990011223344</td>
+                    <td>info@seniorsmiles.org</td>
+                </tr>
+                <tr>
+                    <td>Bright Kids</td>
+                    <td>Support orphaned children</td>
+                    <td>Orphanages and foster care facilities for children in need.</td>
+                    <td>Orphanage</td>
+                    <td>123987654321</td>
+                    <td>112244556677</td>
+                    <td>hello@brightkids.org</td>
+                </tr>
+                <!-- 30 more entries continue similarly -->
+            </table>
+        </div>
+</body>
+</html>

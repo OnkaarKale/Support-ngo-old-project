@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage NGOs - SupportNGO Admin</title>
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        /* Main Section */
+        .manage-ngos-section {
+            max-width: 1000px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .manage-ngos-section h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Add NGO Form */
+        .add-ngo-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .add-ngo-form input[type="text"],
+        .add-ngo-form input[type="email"],
+        .add-ngo-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .add-ngo-form button {
+            padding: 10px 20px;
+            background-color: #8b0bc6;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .add-ngo-form button:hover {
+            background-color: #a348c4;
+        }
+
+        /* NGO Table */
+        .ngo-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .ngo-table th,
+        .ngo-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .ngo-table th {
+            background-color: #f2f2f2;
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .button {
+            padding: 8px 12px;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button.edit {
+            background-color: #e976f4;
+        }
+
+        .button.edit:hover {
+            background-color: #e976f4;
+        }
+
+        .button.delete {
+            background-color: #3e014c;
+        }
+
+        .button.delete:hover {
+            background-color: #3e014c;
+        }
+        
+
+    </style>
+</head>
+
+    <div class="manage-ngos-section">
+        <h2>Manage NGOs</h2>
+
+        
+        <form class="add-ngo-form">
+            <h3>Add New NGO</h3>
+            <input type="text" placeholder="NGO Name" required>
+            <textarea placeholder="Mission Statement" rows="3" required></textarea>
+            <input type="text" placeholder="Location" required>
+            <input type="email" placeholder="Contact Email" required>
+            <button type="submit">Add NGO</button>
+        </form>
+
+     
+        <h3>Existing NGOs</h3>
+        <table class="ngo-table">
+            <tr>
+                <th>NGO Name</th>
+                <th>Mission</th>
+                <th>Location</th>
+                <th>Contact</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td>Helping Hands</td>
+                <td>Provide shelter and support for the homeless</td>
+                <td>Mumbai, India</td>
+                <td>contact@helpinghands.org</td>
+                <td class="actions">
+                    <a href="#" class="button edit">Edit</a>
+                    <a href="#" class="button delete">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Green Earth</td>
+                <td>Promote sustainable environmental practices</td>
+                <td>Pune, India</td>
+                <td>info@greenearth.org</td>
+                <td class="actions">
+                    <a href="#" class="button edit">Edit</a>
+                    <a href="#" class="button delete">Delete</a>
+                </td>
+            </tr>
+           
+        </table>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page - SupportNGO</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Layout */
+        body {
+            display: flex;
+            background-color: #f4f4f9;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            height: 100vh; /* Full viewport height */
+            background-color: #663399;
+            color: #fff;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: fixed; /* Fixes the sidebar on the left */
+            top: 0;
+            left: 0;
+            overflow-y: auto; /* Adds scrolling if content overflows */
+        }
+
+        .sidebar h2 {
+            margin-bottom: 20px;
+            color: #dce1d1;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            width: 100%;
+        }
+
+        .sidebar ul li {
+            width: 100%;
+        }
+
+        .sidebar ul li a {
+            display: block;
+            padding: 15px;
+            color: #fff;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #9a32b7;
+        }
+
+        /* Header */
+        .header {
+            width: 100%;
+            background-color: #663399;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            left: 250px; /* Offset to account for fixed sidebar */
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            margin-left: 250px; /* Offset for the fixed sidebar */
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(181, 27, 27, 0.1);
+        }
+
+        .section h3 {
+            margin-bottom: 15px;
+            color: #100202;
+        }
+
+        /* Sample Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Buttons */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #663399;
+            color: #f9f8f9;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #bb4cda;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>SupportNGO Admin</h2>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="admin.html">Manage NGO</a></li>
+            <li><a href="manageuser.html">Manage User</a></li>
+            <li><a href="managedonors.html">Manage Donors </a></li>
+            <li><a href="managengo.html"> Add NGO</a></li>
+           <!--<li><a href="ngo_signup.html">Sign up page (Ngo)</a></li>-->
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h1>Welcome, Admin</h1>
+        </div>
+
+        <div class="section" id="manage-donors">
+            <h3>Manage Donors</h3>
+            <table>
+                <tr>
+                    <th>Donor Name</th> 
+                    <th>Donated NGO</th>
+                    <th>Email</th>
+                    <th>Donation Amount</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td>John Doe</td>
+                    <td>HelpingHands</td>
+                    <td>john@example.com</td>
+                    <td>$500</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>Save Earth</td>
+                    <td>jane@example.com</td>
+                    <td>$1000</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Michael Johnson</td>
+                    <td>Hope Foundation</td>
+                    <td>michael@example.com</td>
+                    <td>$750</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Emily Davis</td>
+                    <td>Heart of Gold</td>
+                    <td>emily@example.com</td>
+                    <td>$300</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>David Wilson</td>
+                    <td>Education for All</td>
+                    <td>david@example.com</td>
+                    <td>$1200</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Olivia Brown</td>
+                    <td>Women Empowerment</td>
+                    <td>olivia@example.com</td>
+                    <td>$600</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Liam Garcia</td>
+                    <td>Child Education</td>
+                    <td>liam@example.com</td>
+                    <td>$250</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Isabella Martinez</td>
+                    <td>Feed the Hungry</td>
+                    <td>isabella@example.com</td>
+                    <td>$500</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Ethan Rodriguez</td>
+                    <td>Animal Rescue</td>
+                    <td>ethan@example.com</td>
+                    <td>$1000</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Ava Perez</td>
+                    <td>Climate Action</td>
+                    <td>ava@example.com</td>
+                    <td>$800</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>James Taylor</td>
+                    <td>Save the Children</td>
+                    <td>james@example.com</td>
+                    <td>$450</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Charlotte Lee</td>
+                    <td>Global Health Initiative</td>
+                    <td>charlotte@example.com</td>
+                    <td>$600</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Henry Anderson</td>
+                    <td>Clean Water for All</td>
+                    <td>henry@example.com</td>
+                    <td>$950</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Grace Thomas</td>
+                    <td>Community Outreach</td>
+                    <td>grace@example.com</td>
+                    <td>$700</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Jack Harris</td>
+                    <td>End Hunger Now</td>
+                    <td>jack@example.com</td>
+                    <td>$400</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Amelia Clark</td>
+                    <td>Women Health Support</td>
+                    <td>amelia@example.com</td>
+                    <td>$550</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Lucas Lewis</td>
+                    <td>Education for All</td>
+                    <td>lucas@example.com</td>
+                    <td>$1000</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Chloe Walker</td>
+                    <td>Save the Earth</td>
+                    <td>chloe@example.com</td>
+                    <td>$450</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Benjamin Allen</td>
+                    <td>Hope for the Homeless</td>
+                    <td>benjamin@example.com</td>
+                    <td>$1200</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Scarlett Young</td>
+                    <td>Women Empowerment</td>
+                    <td>scarlett@example.com</td>
+                    <td>$650</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Matthew King</td>
+                    <td>Global Peace Foundation</td>
+                    <td>matthew@example.com</td>
+                    <td>$700</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Ella Scott</td>
+                    <td>Climate Change Action</td>
+                    <td>ella@example.com</td>
+                    <td>$900</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Henry Adams</td>
+                    <td>Animal Welfare</td>
+                    <td>henry.a@example.com</td>
+                    <td>$500</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Sophia Nelson</td>
+                    <td>Water for Life</td>
+                    <td>sophia@example.com</td>
+                    <td>$450</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>William Carter</td>
+                    <td>Education for All</td>
+                    <td>william@example.com</td>
+                    <td>$700</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Madeline Mitchell</td>
+                    <td>End Hunger Now</td>
+                    <td>madeline@example.com</td>
+                    <td>$500</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Michael White</td>
+                    <td>Global Health Initiative</td>
+                    <td>michael.w@example.com</td>
+                    <td>$800</td>
+                    <td><a href="#" class="button">View</a> <a href="#" class="button">Delete</a></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</body>
+</html>

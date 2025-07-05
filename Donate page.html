@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - SupportNGO</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f9;
+            color: #333;
+            min-height: 100vh; /* Ensures body takes up full screen height */
+            padding-bottom: 70px; /* Space for footer */
+        }
+
+        /* Header Styling */
+        header {
+            width: 100%;
+            background-color:#663399 ;
+            color: #ecf0f1;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        /* Main Content Styling */
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .intro h2 {
+            color: #2C3E50;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Donation Form */
+        .donate-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .donate-form h3 {
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            padding: 12px;
+            background-color: #663399;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #c834e5;
+        }
+
+        /* Impact Section */
+        .impact-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .impact-section h3 {
+            color: #444;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .impact-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+        }
+
+        .impact-stats div {
+            text-align: center;
+        }
+
+        .impact-stats h4 {
+            font-size: 24px;
+            color: #1abc9c;
+        }
+
+        .impact-stats p {
+            color: #555;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #663399;
+            padding: 20px 30px;
+            color: #ffffff;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .footer-links a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header>
+        <h1>Donate to SupportNGO</h1>
+    </header>
+
+    
+    <div class="container">
+        
+        <section class="intro">
+            <h2>Make a Difference Today</h2>
+            <p>Your donation can help NGOs achieve their mission and make a positive impact in communities worldwide.</p>
+        </section>
+
+      
+        <section class="donate-form">
+            <h3>Donate Now</h3>
+            <form>
+                <div class="form-group">
+                    <label for="ngo-select">Select NGO</label>
+                    <select id="ngo-select" required>
+                        <option value="" disabled selected>Choose an NGO to support</option>
+                        <option value="HelpingHands">Helping Hands</option>
+                        <option value="SaveTheChildren">Save The Children</option>
+                        <option value="GreenEarth">Green Earth Foundation</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="donor-name">Your Name</label>
+                    <input type="text" id="donor-name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="donation-amount">Donation Amount (INR)</label>
+                    <input type="number" id="donation-amount" placeholder="Enter amount" required>
+                </div>
+                <button type="submit" class="btn">Donate Now</button>
+            </form>
+        </section>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 SupportNGO.</p>
+            <div class="footer-links">
+                <a href="#about">About Us</a>
+            </div>
+        </div>
+    </footer>
+    <script src="donation_validation.js"></script>
+
+</body>
+</html>
